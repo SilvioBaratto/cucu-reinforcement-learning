@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cucu-rl"
+version = "0.1.0"
+description = "Reinforcement Learning for the Cucù card game"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Silvio Baratto"}
+]
+dependencies = [
+    "pettingzoo>=1.24.3",
+    "torch>=2.3.1",
+    "numpy>=2.0.0",
+    "matplotlib>=3.8.0",
+    "pandas>=2.1.0",
+    "tqdm>=4.66.0",
+    "tensorboard>=2.15.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.1.0",
+]
+viz = [
+    "playwright>=1.40.0",
+]
+
+[project.scripts]
+cucu = "cucu_rl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cucu_rl*", "src*", "training*", "visualization*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
