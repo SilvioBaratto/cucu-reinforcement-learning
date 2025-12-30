@@ -209,5 +209,6 @@ __marimo__/
 # Project-specific
 visualization/frames/
 results/ppo_selfplay/
+models/checkpoint_*.pt
 CLAUDE.md
 .vscode/
