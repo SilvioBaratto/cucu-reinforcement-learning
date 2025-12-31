@@ -73,6 +73,21 @@ Despite simple rules, Cucù has surprising strategic depth:
 
 ## Probability Analysis
 
+### Win Probability Evolution
+
+The following animation shows how each player's probability of winning evolves during a game based on their remaining lives:
+
+<p align="center">
+  <img src="cucu_probability_evolution.gif" alt="Win Probability Evolution" width="700">
+</p>
+
+**Key observations:**
+- All players start with equal probability: **P(win) = 1/n** (25% for 4 players)
+- Losing a life significantly decreases win probability
+- A player with 2 lives vs opponents with 1 life has ~75% win probability
+- When eliminated (0 lives), probability drops to 0%
+- The final surviving player reaches 100% probability
+
 ### Baseline Win Probability
 
 In a game with $n$ players making random decisions:

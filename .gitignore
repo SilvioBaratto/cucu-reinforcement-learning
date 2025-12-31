@@ -212,3 +212,6 @@ results/ppo_selfplay/
 models/checkpoint_*.pt
 CLAUDE.md
 .vscode/
+
+# Analysis output
+analysis/output/
